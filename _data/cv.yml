@@ -1,0 +1,125 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Ilham Fazri
+    - name: Date of Birth
+      value: 25th January 1999
+    - name: Languages
+      value: Indonesia, English, Sundanese
+
+- title: 🎓 Education
+  type: time_table
+  contents:
+    - title: "B.s. in Electronic and Instrumentation (GPA : 3.8/4.0)"
+      institution: Gadjah Mada University
+      year: Aug, 2018  - Aug, 2022
+      description:
+        - Actively participate and got awards from international and national competition
+        - "Thesis : Detection and Recognition Multiple Traffic Violation Type using Video Processing Based On YOLO"
+        - "Relevant Courses : Computer Vision, Principles of Programming, Theory of Computation, & Computer Networks"
+
+    - title: Machine Learning Path
+      institution: Bangkit 2021
+      year: Jan, 2021 - Jun, 2021
+      description:
+        - Become part of 3000 students out of 40000 applicants to take in programs created by the ministry and cultural education in collaboration with Google, Tokopedia, Gojek, Traveloka and other tech companies in Indonesia. 
+        - We learn basic of machine learning for computer vision, NLP and tabular data and we also learn soft skills needed to be successful in tech industries, such as team work, time management, and leadership.
+        - Build Doctor.ai that can predict disease based on symptoms using machine learning as a final project.
+
+    - title: Associate Degree in Electronics
+      institution: Cimahi State Vocational High School 1 (4 Years Program)
+      year: 2014 - 2018 
+      description:
+        - Selected to represent the West Java region in the largest national vocational competition in mobile robotic held by the Ministry of Education with the result of getting first place
+        - "Math National Exam Score : 100/100"
+        - "Relevant Courses : Robotics, Digital Logic & C++"
+
+
+- title: 💼 Experience
+  type: time_table
+  contents:
+    - title: AI Engineer 
+      institution: Widya Wicara
+      year: Feb 2022 - Now
+      description:
+        - Improve speech-to-text for indonesian language from ~8% WER to ~4% WER by implement the state of the art model and add language model for fixing miss spell prediction.
+        - Built indonesian male text-to-speech and improve text-to-speech (male & female) pronunciation in english word.
+        - Research, built, and deploy to production for NLP downstream task, STT, and TTS model.
+        - "Tech Stack : Deep Learning Framework (Pytorch & TensorFlow),  Backend (FastAPI, Flask, RabbitMQ & Celery), Database (MongoDB & PostgreSQL), Frontend (Javascript, CSS & HTML) & DevOps (AWS S3 & EC2)"
+    
+    - title: Research Assistant - Freelance
+      institution: Department Computer Science and Electronics, Gadjah Mada University
+      year: Jun 2021 - Now
+      description:
+        - Research on computer vision (more info will update soon) and semantic segmentation.
+        - Annotate high resolution semantic segmentation dataset from Prambanan and Borobudur relief.
+
+    - title: AI Engineer - Part Time
+      institution: Widya Wicara
+      year: May 2021 - Jan 2022
+      description:
+        - Research and built fast and robust voice activity detection and wake-word model that can be running on browser and embedded hardware.
+        - Research and built on  NLP downstream task model for Indonesian language such as, restore punctuation, meeting summarizer, intent and entity extraction, and question-answer retrieval from document.
+        - Research and built model for speaker diarization and multi-speaker text-to-speech.
+        - "Tech Stack : Linux, Bash Scripting, Deep Learning Framework (Pytorch, TensorFlow (also TFLite) & ONNX), Google Colab, and GCE"
+
+- title: 🚀 Open Source Projects
+  type: time_table
+  contents:
+    - title: <a href="https://github.com/ilhamfzri/traffic-violation-detection">traffic-violation-detection</a>
+      year: Dec 2021-now
+      description: Traffic violation detection is a system was built to detect various traffic violations. Currently, this system only supports detecting running red light violation, helmet violation, and wrong-way.
+
+- title: 🎖 Honors and Awards
+  type: time_table
+  contents:          
+    - title: Awardee Puncak Persembahan Prestasi Talenta Indonesia 
+      institution: The Ministry of Education, Culture, Research, and Technology, Republic of Indonesia
+      year: Dec, 2020
+      items: 
+        - One of the students who was selected because of achievements in national and international competitions.
+
+    - title: Double Gold Medal (Presentation and Poster) at PKM Karsa Cipta, Pekan Ilmiah Nasional (PIMNAS) ke‐33
+      institution: The Ministry of Education, Culture, Research, and Technology, Republic of Indonesia
+      year: Nov, 2020
+      items: 
+        - Built an early detection peripheral neuropathy system for diabetes mellitus sufferers using computer vision and integrated with the android application.
+    
+    - title: Finalist Smart City Category, Pagelaran Mahasiswa Nasional bidang Teknologi Informasi dan Komunikasi (GemasTIK) 2020
+      institution: The Ministry of Research and Technology, Republic of Indonesia
+      year: Oct, 2020
+      items: 
+        - Built <a href="https://github.com/ilhamfzri/CovaTech">CovaTech</a> is an app to helped the government to reduce the spread of the COVID-19 virus.
+
+    - title: Gold Medal at Technology 
+      institution: International Science Technology and Engineering Competition
+      year: Jan, 2020
+      items: 
+        - Built Spherotec that has functions to anticipate ampuation in people with diabetes mellitus.
+        
+    - title: 2nd Place at Vertical Takef-off and Landing Division, Kontes Robot Terbang Indonesia (KRTI) 2019
+      institution: The Ministry of Research and Technology, Republic of Indonesia
+      year: Oct, 2019
+      items: 
+        - Built a drone that can droping payloads automatically based on GPS and computer vision
+
+    - title: 1st Place at Mobile Robotic Category, Lomba Kompetensi Siswa (LKS) Tingkat Nasional 2017
+      institution: The Ministry of Education, Culture, Research, and Technology, Republic of Indonesia
+      year: May, 2017
+      items: 
+        - Built a robot that can navigate through a maze automatically to pick up and move the payload according to its place based on payload color.
+
+- title: 📜 Certification and Courses
+  type: time_table
+  contents:
+    - title: <a href="https://www.credential.net/662de6a0-84cd-40e1-8ff2-0d37deadbb03#gs.93ed9l">TensorFlow Developer Certificate</a>, Google
+    - title: <a href="https://coursera.org/verify/specialization/LA9SS3NW2RF9">TensorFlow Data and Deployment Specialization</a>, DeepLearning.ai
+    - title: <a href="https://www.coursera.org/account/accomplishments/professional-cert/4U9PLGXMAB2L">DeepLearning.AI TensorFlow Developer Specialization</a>, DeepLearning.ai
+    - title: <a href="https://www.coursera.org/account/accomplishments/verify/4K753TXRE8NC">Structuring Machine Learning Projects Specialization</a>, DeepLearning.ai
+    - title: <a href="https://www.coursera.org/account/accomplishments/specialization/9U5V4J9YJU3MC">Mathematics for Machine Learning Specialization</a>, Imperial College London
+    - title: <a href="https://www.coursera.org/account/accomplishments/professional-cert/F2QRG6H66VAP">Google IT Support Specialization</a>, Google
+    - title: <a href="https://www.coursera.org/account/accomplishments/professional-cert/JY76YK75D3UJ">Google IT Automation with Python Specialzation</a>, Google
+    - title: <a href="https://www.credly.com/badges/6effa4c9-5c67-4722-978e-44309bd20f08/public_url">AWS Academy Cloud Architecting</a>, AWS
+    - title: <a href="https://www.credly.com/badges/e960beb1-e725-48dd-88d2-49cc3fc275d2?source=linked_in_profile">AWS Academy Cloud Foundations</a>, AWS
+    
