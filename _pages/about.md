@@ -20,7 +20,10 @@ profile:
 social: true  # includes social icons at the bottom of the page
 ---
 
-I'm an AI Engineer from Indonesia 🇮🇩, who likes to build some projects with DeepLearning/Machine Learning frameworks, SQL and NoSQL databases, Docker, Python, and backend APIs. Also, I have experience in building a native android app using Java and building website platform using Javascript + Flask.
+Fresh Graduate with ≈2 years of work experience as an Artificial Intelligence (AI) Engineer in application design, development, testing, and deployment.
+Experienced in writing codes and algorithms as well as building complex neural networks using some deep learning frameworks. A self‑motivated who is willing to learn new techniques and best practices to deliver efficient and accurate machine learning solutions.
+
+<!-- I'm an AI Engineer from Indonesia 🇮🇩, who likes to build some projects with DeepLearning/Machine Learning frameworks, SQL and NoSQL databases, Docker, Python, and backend APIs. Also, I have experience in building a native android app using Java and building website platform using Javascript + Flask. -->
 
 In my free time, I like playing games 🎮, watching movies or TV series 🍿, and reading SOTA paper in machine learning as my sleeping pills 💊.
 

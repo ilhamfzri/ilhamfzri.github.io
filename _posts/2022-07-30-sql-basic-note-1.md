@@ -1,13 +1,13 @@
 ---
 layout: post
-title: SQL Basic Note \#1
+title: SQL Basic Note 1
 date: 2022-07-28 23::00
 description: 
-tags: docker cheatsheet
-categories: cheatsheet
+tags: SQL note tutorial
+categories: post
 ---
 
-# SQL Basic Notes #1
+# SQL Basic Note #1
 
 ## What is SQL ?
 SQL  stands for structured query language and it is used to communicate with relational database. But for more simplicity it as “excel on steroids”. I stated that because SQL is just like excel that the data is represent in table format with row and column. The big advantage when using SQL than excel are SQL can query faster even when the data has 10 millions row that is why the reason SQL mostly used as database.
@@ -61,8 +61,9 @@ The `SELECT` statement is used to select data from a database.
 ```sql
 SELECT animal, water_need FROM zoo
 ```
+
 |animal|water_need                   |
-|------|-----------------------------|
+|------|:-----------------------------:|
 |elephant|500                          |
 |elephant|600                          |
 |elephant|550                          |
@@ -72,6 +73,7 @@ SELECT animal, water_need FROM zoo
 |tiger |290                          |
 |tiger |310                          |
 |zebra |200                          |
+
 ---
 
 ## **WHERE**
@@ -85,6 +87,7 @@ FROM table_name
 WHERE condition;
 ```
 We add comparision operator for set the condition
+
 |Comparision Operator|What does it mean?|
 |------|----------|
 |= |Equal to       |
@@ -118,6 +121,7 @@ WHERE animal='zebra'
 SELECT animal, water_need FROM zoo
 WHERE water_need>500
 ```
+
 |animal  |water_need|
 |--------|----------|
 |elephant|600       |
@@ -129,6 +133,7 @@ WHERE water_need>500
 SELECT animal, water_need FROM zoo
 WHERE animal LIKE 'ele%'
 ```
+
 |animal  |water_need|
 |--------|----------|
 |elephant|500       |
@@ -140,11 +145,13 @@ WHERE animal LIKE 'ele%'
 SELECT animal, water_need FROM zoo
 WHERE animal IN ('elephant','lion')
 ```
+
 |animal  |water_need|
 |--------|----------|
 |elephant|500       |
 |elephant|600       |
 |elephant|550       |
+
 ---
 
 ## **LIMIT**
@@ -163,11 +170,13 @@ SELECT animal, water_need FROM zoo.zoo
 WHERE animal='tiger'
 LIMIT 3
 ```
+
 |animal|water_need|
 |------|----------|
 |tiger |300       |
 |tiger |320       |
 |tiger |330       |
+
 ---
 
 
@@ -199,6 +208,7 @@ The `WHERE` clause can be combined with AND, OR, and NOT operators.
 SELECT animal, water_need FROM zoo.zoo
 WHERE animal='tiger' AND water_need<300;
 ```
+
 |animal|water_need|
 |------|----------|
 |tiger |290       |
@@ -209,6 +219,7 @@ WHERE animal='tiger' AND water_need<300;
 SELECT animal, water_need FROM zoo.zoo
 WHERE water_need<200 OR water_need>500;
 ```
+
 |animal  |water_need|
 |--------|----------|
 |elephant|600       |
@@ -216,6 +227,7 @@ WHERE water_need<200 OR water_need>500;
 |zebra   |100       |
 |zebra   |80        |
 |lion    |600       |
+
 ---
 
 ## Reference
