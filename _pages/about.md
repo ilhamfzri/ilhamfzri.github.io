@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Currently AI Engineer at <a href='http://widyawicara.com'>Widya Wicara</a> and a Final Year Undergraduate Student at <a href='https://www.ugm.ac.id'>Gadjah Mada University</a>
+# subtitle: Currently AI Engineer at <a href='http://widyawicara.com'>Widya Wicara</a> and a Final Year Undergraduate Student at <a href='https://www.ugm.ac.id'>Gadjah Mada University</a>
 
 
 profile:
@@ -20,12 +20,11 @@ profile:
 social: true  # includes social icons at the bottom of the page
 ---
 
-Fresh Graduate with ≈2 years of work experience as an Artificial Intelligence (AI) Engineer in application design, development, testing, and deployment.
-Experienced in writing codes and algorithms as well as building complex neural networks using some deep learning frameworks. A self‑motivated who is willing to learn new techniques and best practices to deliver efficient and accurate machine learning solutions.
+A highly motivated and passionate software engineer with 1.5+ years of experience in application design, development, testing, and deployment. Skilled in creating robust applications with an emphasis on scalability, reliability, and efficiency. Adaptive to new technologies and best practices in software development, always striving to produce the highest quality results.
 
 <!-- I'm an AI Engineer from Indonesia 🇮🇩, who likes to build some projects with DeepLearning/Machine Learning frameworks, SQL and NoSQL databases, Docker, Python, and backend APIs. Also, I have experience in building a native android app using Java and building website platform using Javascript + Flask. -->
 
-In my free time, I like playing games 🎮, watching movies or TV series 🍿, and reading SOTA paper in machine learning as my sleeping pills 💊.
+<!-- In my free time, I like playing games 🎮, watching movies or TV series 🍿, and reading SOTA paper in machine learning as my sleeping pills 💊. -->
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
