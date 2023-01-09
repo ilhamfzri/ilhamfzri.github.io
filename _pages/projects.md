@@ -2,8 +2,8 @@
 layout: page
 title: projects
 permalink: /projects/
-description: my personal projects
-nav: true
+description: My Personal Projects
+nav: false
 nav_order: 2
 display_categories: [work, fun]
 horizontal: false
