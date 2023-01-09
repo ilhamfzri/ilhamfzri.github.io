@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="https://ilhamfzri.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://ilhamfzri.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2023-01-09T03:41:01+00:00</updated><id>https://ilhamfzri.github.io/feed.xml</id><title type="html">blank</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design. </subtitle><entry><title type="html">SQL Basic Note 2</title><link href="https://ilhamfzri.github.io/blog/2022/sql-basic-note-2/" rel="alternate" type="text/html" title="SQL Basic Note 2"/><published>2022-08-02T23:00:00+00:00</published><updated>2022-08-02T23:00:00+00:00</updated><id>https://ilhamfzri.github.io/blog/2022/sql-basic-note-2</id><content type="html" xml:base="https://ilhamfzri.github.io/blog/2022/sql-basic-note-2/"><![CDATA[<h2 id="sample-database"><strong>Sample Database</strong></h2> <p>I’ve used MySQL Sample Database from this source :</p> <p><a href="https://www.mysqltutorial.org/mysql-sample-database.aspx">https://www.mysqltutorial.org/mysql-sample-database.aspx</a></p> <h2 id="count"><strong>COUNT()</strong></h2> <h3 id="definition">Definition</h3> <p>The <code class="language-plaintext highlighter-rouge">COUNT()</code> function returns the number of rows that matches a specified criterion.</p> <h3 id="syntax">Syntax</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span><span class="k">column_name</span><span class="p">)</span>
+  <span class="k">FROM</span> <span class="k">table_name</span>
+  <span class="k">WHERE</span> <span class="n">condition</span><span class="p">;</span>
+</code></pre></div></div> <h3 id="example">Example</h3> <p>Calculate number of costumers from new york city.</p> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">classicmodels</span><span class="p">.</span><span class="n">customers</span>
+<span class="k">WHERE</span> <span class="n">CITY</span><span class="o">=</span><span class="nv">"NYC"</span><span class="p">;</span>
+</code></pre></div></div> <table> <thead> <tr> <th>COUNT(*)</th> </tr> </thead> <tbody> <tr> <td>5</td> </tr> </tbody> </table> <hr/> <h2 id="avg"><strong>AVG()</strong></h2> <h3 id="definition-1">Definition</h3> <p>The <code class="language-plaintext highlighter-rouge">AVG()</code> function returns the average value of a numeric column.</p> <h3 id="syntax-1">Syntax</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="k">column_name</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="k">table_name</span>
+<span class="k">WHERE</span> <span class="n">condition</span><span class="p">;</span>
+</code></pre></div></div> <h3 id="example-1">Example</h3> <p>Calculate the avarage value of credit limit for costumers from USA.</p> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="k">AVG</span><span class="p">(</span><span class="n">creditLimit</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">classicmodels</span><span class="p">.</span><span class="n">customers</span>
+<span class="k">WHERE</span> <span class="n">country</span><span class="o">=</span><span class="nv">"USA"</span><span class="p">;</span>
+</code></pre></div></div> <table> <thead> <tr> <th>AVG(creditLimit)</th> </tr> </thead> <tbody> <tr> <td>78102.777778</td> </tr> </tbody> </table> <hr/> <h2 id="sum"><strong>SUM()</strong></h2> <h3 id="definition-2">Definition</h3> <p>The <code class="language-plaintext highlighter-rouge">SUM()</code> function returns the total sum of a numeric column.</p> <h3 id="syntax-2">Syntax</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="k">SUM</span><span class="p">(</span><span class="k">column_name</span><span class="p">)</span>
+  <span class="k">FROM</span> <span class="k">table_name</span>
+  <span class="k">WHERE</span> <span class="n">condition</span><span class="p">;</span>
+</code></pre></div></div> <h3 id="example-2">Example</h3> <p>Calculate the total value of credit limit for costumers from Victoria, Australia.</p> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="k">SUM</span><span class="p">(</span><span class="n">creditLimit</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">classicmodels</span><span class="p">.</span><span class="n">customers</span>
+<span class="k">WHERE</span> <span class="k">state</span><span class="o">=</span><span class="nv">"Victoria"</span><span class="p">;</span>
+</code></pre></div></div> <table> <thead> <tr> <th>SUM(creditLimit)</th> </tr> </thead> <tbody> <tr> <td>177600.00</td> </tr> </tbody> </table> <hr/> <h2 id="max"><strong>MAX()</strong></h2> <h3 id="definition-3">Definition</h3> <p>The <code class="language-plaintext highlighter-rouge">MAX()</code> function returns the largest value of the selected column.</p> <h3 id="syntax-3">Syntax</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="k">MAX</span><span class="p">(</span><span class="k">column_name</span><span class="p">)</span>
+  <span class="k">FROM</span> <span class="k">table_name</span>
+  <span class="k">WHERE</span> <span class="n">condition</span><span class="p">;</span>
+</code></pre></div></div> <h3 id="example-3">Example</h3> <p>Find a customer name who has the largest of credit limit.</p> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="p">(</span><span class="n">customerName</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">classicmodels</span><span class="p">.</span><span class="n">customers</span>
+<span class="k">WHERE</span> <span class="n">creditLimit</span> <span class="o">=</span> <span class="p">(</span><span class="k">SELECT</span> <span class="k">MAX</span><span class="p">(</span><span class="n">creditLimit</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">classicmodels</span><span class="p">.</span><span class="n">customers</span><span class="p">);</span>
+</code></pre></div></div> <table> <thead> <tr> <th>customerName</th> </tr> </thead> <tbody> <tr> <td>Euro+ Shopping Channel</td> </tr> </tbody> </table> <hr/> <h2 id="min"><strong>MIN()</strong></h2> <h3 id="definition-4">Definition</h3> <p>The <code class="language-plaintext highlighter-rouge">MIN()</code> function returns the smallest value of the selected column.</p> <h3 id="syntax-4">Syntax</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="k">MIN</span><span class="p">(</span><span class="k">column_name</span><span class="p">)</span>
+  <span class="k">FROM</span> <span class="k">table_name</span>
+  <span class="k">WHERE</span> <span class="n">condition</span><span class="p">;</span>
+</code></pre></div></div> <h3 id="example-4">Example</h3> <p>Find 5 costumers data who has minimum credit limit.</p> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">classicmodels</span><span class="p">.</span><span class="n">customers</span>
+<span class="k">WHERE</span> <span class="n">creditLimit</span> <span class="o">=</span> <span class="p">(</span><span class="k">SELECT</span> <span class="k">MIN</span><span class="p">(</span><span class="n">creditLimit</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">classicmodels</span><span class="p">.</span><span class="n">customers</span><span class="p">);</span>
+</code></pre></div></div> <table> <thead> <tr> <th>customerNumber</th> <th>customerName</th> <th>contactLastName</th> <th>contactFirstName</th> <th>phone</th> <th>addressLine1</th> <th>addressLine2</th> <th>city</th> <th>state</th> <th>postalCode</th> <th>country</th> <th>salesRepEmployeeNumber</th> <th>creditLimit</th> </tr> </thead> <tbody> <tr> <td>125</td> <td>Havel &amp; Zbyszek Co</td> <td>Piestrzeniewicz</td> <td>Zbyszek</td> <td>(26) 642-7555</td> <td>ul. Filtrowa 68</td> <td>NULL</td> <td>Warszawa</td> <td>NULL</td> <td>01-012</td> <td>Poland</td> <td>NULL</td> <td>0.00</td> </tr> <tr> <td>168</td> <td>American Souvenirs Inc</td> <td>Franco</td> <td>Keith</td> <td>2035557845</td> <td>149 Spinnaker Dr.</td> <td>Suite 101</td> <td>New Haven</td> <td>CT</td> <td>97823</td> <td>USA</td> <td>1286</td> <td>0.00</td> </tr> <tr> <td>169</td> <td>Porto Imports Co.</td> <td>de Castro</td> <td>Isabel</td> <td>(1) 356-5555</td> <td>Estrada da saúde n. 58</td> <td>NULL</td> <td>Lisboa</td> <td>NULL</td> <td>1756</td> <td>Portugal</td> <td>NULL</td> <td>0.00</td> </tr> <tr> <td>206</td> <td>Asian Shopping Network, Co</td> <td>Walker</td> <td>Brydey</td> <td>+612 9411 1555</td> <td>Suntec Tower Three</td> <td>8 Temasek</td> <td>Singapore</td> <td>NULL</td> <td>038988</td> <td>Singapore</td> <td>NULL</td> <td>0.00</td> </tr> <tr> <td>223</td> <td>Natürlich Autos</td> <td>Kloss</td> <td>Horst</td> <td>0372-555188</td> <td>Taucherstraße 10</td> <td>NULL</td> <td>Cunewalde</td> <td>NULL</td> <td>01307</td> <td>Germany</td> <td>NULL</td> <td>0.00</td> </tr> </tbody> </table> <hr/> <h2 id="min-1"><strong>MIN()</strong></h2> <h3 id="definition-5">Definition</h3> <p>The <code class="language-plaintext highlighter-rouge">MIN()</code> function returns the smallest value of the selected column.</p> <h3 id="syntax-5">Syntax</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="k">MIN</span><span class="p">(</span><span class="k">column_name</span><span class="p">)</span>
+  <span class="k">FROM</span> <span class="k">table_name</span>
+  <span class="k">WHERE</span> <span class="n">condition</span><span class="p">;</span>
+</code></pre></div></div> <h3 id="example-5">Example</h3> <p>Find 5 costumers data who has minimum credit limit.</p> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">*</span> <span class="k">FROM</span> <span class="n">classicmodels</span><span class="p">.</span><span class="n">customers</span>
+<span class="k">WHERE</span> <span class="n">creditLimit</span> <span class="o">=</span> <span class="p">(</span><span class="k">SELECT</span> <span class="k">MIN</span><span class="p">(</span><span class="n">creditLimit</span><span class="p">)</span> <span class="k">FROM</span> <span class="n">classicmodels</span><span class="p">.</span><span class="n">customers</span><span class="p">);</span>
+</code></pre></div></div> <table> <thead> <tr> <th>customerNumber</th> <th>customerName</th> <th>contactLastName</th> <th>contactFirstName</th> <th>phone</th> <th>addressLine1</th> <th>addressLine2</th> <th>city</th> <th>state</th> <th>postalCode</th> <th>country</th> <th>salesRepEmployeeNumber</th> <th>creditLimit</th> </tr> </thead> <tbody> <tr> <td>125</td> <td>Havel &amp; Zbyszek Co</td> <td>Piestrzeniewicz</td> <td>Zbyszek</td> <td>(26) 642-7555</td> <td>ul. Filtrowa 68</td> <td>NULL</td> <td>Warszawa</td> <td>NULL</td> <td>01-012</td> <td>Poland</td> <td>NULL</td> <td>0.00</td> </tr> <tr> <td>168</td> <td>American Souvenirs Inc</td> <td>Franco</td> <td>Keith</td> <td>2035557845</td> <td>149 Spinnaker Dr.</td> <td>Suite 101</td> <td>New Haven</td> <td>CT</td> <td>97823</td> <td>USA</td> <td>1286</td> <td>0.00</td> </tr> <tr> <td>169</td> <td>Porto Imports Co.</td> <td>de Castro</td> <td>Isabel</td> <td>(1) 356-5555</td> <td>Estrada da saúde n. 58</td> <td>NULL</td> <td>Lisboa</td> <td>NULL</td> <td>1756</td> <td>Portugal</td> <td>NULL</td> <td>0.00</td> </tr> <tr> <td>206</td> <td>Asian Shopping Network, Co</td> <td>Walker</td> <td>Brydey</td> <td>+612 9411 1555</td> <td>Suntec Tower Three</td> <td>8 Temasek</td> <td>Singapore</td> <td>NULL</td> <td>038988</td> <td>Singapore</td> <td>NULL</td> <td>0.00</td> </tr> <tr> <td>223</td> <td>Natürlich Autos</td> <td>Kloss</td> <td>Horst</td> <td>0372-555188</td> <td>Taucherstraße 10</td> <td>NULL</td> <td>Cunewalde</td> <td>NULL</td> <td>01307</td> <td>Germany</td> <td>NULL</td> <td>0.00</td> </tr> </tbody> </table> <hr/> <h2 id="group-by"><strong>GROUP BY</strong></h2> <h3 id="definition-6">Definition</h3> <p>The <code class="language-plaintext highlighter-rouge">GROUP BY</code> statement groups rows that have the same values into summary rows, like “find the number of customers in each country”.</p> <p>The <code class="language-plaintext highlighter-rouge">GROUP BY</code> statement is often used with aggregate functions <code class="language-plaintext highlighter-rouge">(COUNT(), MAX(), MIN(), SUM(), AVG())</code> to group the result-set by one or more columns.</p> <h3 id="syntax-6">Syntax</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+  <span class="k">FROM</span> <span class="k">table_name</span>
+  <span class="k">WHERE</span> <span class="n">condition</span>
+  <span class="k">GROUP</span> <span class="k">BY</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</code></pre></div></div> <h3 id="example-6">Example</h3> <p>Find average credit limit for customers by country segmentation.</p> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">country</span><span class="p">,</span> <span class="k">AVG</span><span class="p">(</span><span class="n">creditLimit</span><span class="p">)</span> 
+<span class="k">FROM</span> <span class="n">classicmodels</span><span class="p">.</span><span class="n">customers</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">country</span><span class="p">;</span>
+</code></pre></div></div> <table> <thead> <tr> <th>country</th> <th>AVG(creditLimit)</th> </tr> </thead> <tbody> <tr> <td>France</td> <td>77691.666667</td> </tr> <tr> <td>USA</td> <td>78102.777778</td> </tr> <tr> <td>Australia</td> <td>86060.000000</td> </tr> <tr> <td>Norway</td> <td>91200.000000</td> </tr> <tr> <td>Poland</td> <td>0.000000</td> </tr> <tr> <td>Germany</td> <td>19776.923077</td> </tr> <tr> <td>Spain</td> <td>73971.428571</td> </tr> <tr> <td>Sweden</td> <td>84750.000000</td> </tr> <tr> <td>Denmark</td> <td>102100.000000</td> </tr> <tr> <td>Singapore</td> <td>67233.333333</td> </tr> </tbody> </table> <hr/> <h2 id="order-by"><strong>ORDER BY</strong></h2> <h3 id="definition-7">Definition</h3> <p>The <code class="language-plaintext highlighter-rouge">ORDER BY</code> keyword is used to sort the result-set in ascending or descending order.</p> <p>The <code class="language-plaintext highlighter-rouge">ORDER BY</code> keyword sorts the records in ascending order by default. To sort the records in descending order, use the <code class="language-plaintext highlighter-rouge">DESC</code> keyword.</p> <h3 id="syntax-7">Syntax</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...</span>
+  <span class="k">FROM</span> <span class="k">table_name</span>
+  <span class="k">ORDER</span> <span class="k">BY</span> <span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...</span> <span class="k">ASC</span><span class="o">|</span><span class="k">DESC</span><span class="p">;</span>
+</code></pre></div></div> <h3 id="example-7">Example</h3> <p>Find the top ten number of customers by country</p> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">country</span><span class="p">,</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">classicmodels</span><span class="p">.</span><span class="n">customers</span>
+<span class="k">GROUP</span> <span class="k">BY</span> <span class="n">country</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span> <span class="k">DESC</span>
+<span class="k">LIMIT</span> <span class="mi">10</span><span class="p">;</span>
+
+</code></pre></div></div> <table> <thead> <tr> <th>country</th> <th>COUNT(*)</th> </tr> </thead> <tbody> <tr> <td>USA</td> <td>36</td> </tr> <tr> <td>Germany</td> <td>13</td> </tr> <tr> <td>France</td> <td>12</td> </tr> <tr> <td>Spain</td> <td>7</td> </tr> <tr> <td>Australia</td> <td>5</td> </tr> <tr> <td>UK</td> <td>5</td> </tr> <tr> <td>New Zealand</td> <td>4</td> </tr> <tr> <td>Italy</td> <td>4</td> </tr> <tr> <td>Norway</td> <td>3</td> </tr> <tr> <td>Singapore</td> <td>3</td> </tr> </tbody> </table> <hr/> <h2 id="distinct"><strong>DISTINCT</strong></h2> <h3 id="definition-8">Definition</h3> <p>The <strong>SELECT DISTINCT</strong> statement is used to return only distinct (different) values.</p> <h3 id="syntax-8">Syntax</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="k">DISTINCT</span> <span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...</span>
+  <span class="k">FROM</span> <span class="k">table_name</span><span class="p">;</span>
+</code></pre></div></div> <h3 id="example-8">Example</h3> <p>Top ten list of state sort by ascending order</p> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="k">DISTINCT</span><span class="p">(</span><span class="k">state</span><span class="p">)</span>
+<span class="k">FROM</span> <span class="n">classicmodels</span><span class="p">.</span><span class="n">customers</span>
+<span class="k">ORDER</span> <span class="k">BY</span> <span class="k">state</span>
+<span class="k">LIMIT</span> <span class="mi">10</span><span class="p">;</span>
+</code></pre></div></div> <table> <thead> <tr> <th>state</th> </tr> </thead> <tbody> <tr> <td>NULL</td> </tr> <tr> <td>BC</td> </tr> <tr> <td>CA</td> </tr> <tr> <td>Co. Cork</td> </tr> <tr> <td>CT</td> </tr> <tr> <td>Isle of Wight</td> </tr> <tr> <td>MA</td> </tr> <tr> <td>NH</td> </tr> <tr> <td>NJ</td> </tr> <tr> <td>NSW</td> </tr> </tbody> </table> <h2 id="reference">Reference</h2> <p><a href="https://www.w3schools.com/sql">W33 School SQL</a></p>]]></content><author><name></name></author><category term="post"/><category term="SQL"/><category term="note"/><category term="tutorial"/><summary type="html"><![CDATA[Sample Database I’ve used MySQL Sample Database from this source :]]></summary></entry><entry><title type="html">SQL Basic Note 1</title><link href="https://ilhamfzri.github.io/blog/2022/sql-basic-note-1/" rel="alternate" type="text/html" title="SQL Basic Note 1"/><published>2022-07-28T00:00:00+00:00</published><updated>2022-07-28T00:00:00+00:00</updated><id>https://ilhamfzri.github.io/blog/2022/sql-basic-note-1</id><content type="html" xml:base="https://ilhamfzri.github.io/blog/2022/sql-basic-note-1/"><![CDATA[<h1 id="sql-basic-note-1">SQL Basic Note #1</h1> <h2 id="what-is-sql-">What is SQL ?</h2> <p>SQL stands for structured query language and it is used to communicate with relational database. But for more simplicity it as “excel on steroids”. I stated that because SQL is just like excel that the data is represent in table format with row and column. The big advantage when using SQL than excel are SQL can query faster even when the data has 10 millions row that is why the reason SQL mostly used as database.</p> <hr/> <h2 id="create-table"><strong>Create Table</strong></h2> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="k">TABLE</span> <span class="n">zoo</span><span class="p">(</span>
+  <span class="n">animal</span> <span class="nb">varchar</span> <span class="p">(</span><span class="mi">10</span><span class="p">),</span>
+  <span class="n">uniq_id</span> <span class="nb">integer</span> <span class="k">PRIMARY</span> <span class="k">KEY</span><span class="p">,</span>
+  <span class="n">water_need</span> <span class="nb">integer</span>
+<span class="p">);</span>
+
+<span class="k">INSERT</span> <span class="k">INTO</span> <span class="n">zoo</span> <span class="p">(</span><span class="n">animal</span><span class="p">,</span><span class="n">uniq_id</span><span class="p">,</span><span class="n">water_need</span><span class="p">)</span> <span class="k">VALUES</span>
+  <span class="p">(</span><span class="s1">'elephant'</span><span class="p">,</span><span class="mi">1001</span><span class="p">,</span><span class="mi">500</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'elephant'</span><span class="p">,</span><span class="mi">1002</span><span class="p">,</span><span class="mi">600</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'elephant'</span><span class="p">,</span><span class="mi">1003</span><span class="p">,</span><span class="mi">550</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'tiger'</span><span class="p">,</span><span class="mi">1004</span><span class="p">,</span><span class="mi">300</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'tiger'</span><span class="p">,</span><span class="mi">1005</span><span class="p">,</span><span class="mi">320</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'tiger'</span><span class="p">,</span><span class="mi">1006</span><span class="p">,</span><span class="mi">330</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'tiger'</span><span class="p">,</span><span class="mi">1007</span><span class="p">,</span><span class="mi">290</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'tiger'</span><span class="p">,</span><span class="mi">1008</span><span class="p">,</span><span class="mi">310</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'zebra'</span><span class="p">,</span><span class="mi">1009</span><span class="p">,</span><span class="mi">200</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'zebra'</span><span class="p">,</span><span class="mi">1010</span><span class="p">,</span><span class="mi">220</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'zebra'</span><span class="p">,</span><span class="mi">1011</span><span class="p">,</span><span class="mi">240</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'zebra'</span><span class="p">,</span><span class="mi">1012</span><span class="p">,</span><span class="mi">230</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'zebra'</span><span class="p">,</span><span class="mi">1013</span><span class="p">,</span><span class="mi">220</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'zebra'</span><span class="p">,</span><span class="mi">1014</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'zebra'</span><span class="p">,</span><span class="mi">1015</span><span class="p">,</span><span class="mi">80</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'lion'</span><span class="p">,</span><span class="mi">1016</span><span class="p">,</span><span class="mi">420</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'lion'</span><span class="p">,</span><span class="mi">1017</span><span class="p">,</span><span class="mi">600</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'lion'</span><span class="p">,</span><span class="mi">1018</span><span class="p">,</span><span class="mi">500</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'lion'</span><span class="p">,</span><span class="mi">1019</span><span class="p">,</span><span class="mi">390</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'kangaroo'</span><span class="p">,</span><span class="mi">1020</span><span class="p">,</span><span class="mi">410</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'kangaroo'</span><span class="p">,</span><span class="mi">1021</span><span class="p">,</span><span class="mi">430</span><span class="p">),</span>
+  <span class="p">(</span><span class="s1">'kangaroo'</span><span class="p">,</span><span class="mi">1022</span><span class="p">,</span><span class="mi">410</span><span class="p">);</span>
+</code></pre></div></div> <hr/> <h2 id="select"><strong>SELECT</strong></h2> <h3 id="definition">Definition</h3> <p>The <code class="language-plaintext highlighter-rouge">SELECT</code> statement is used to select data from a database.</p> <h3 id="syntax">Syntax</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...</span>
+  <span class="k">FROM</span> <span class="k">table_name</span><span class="p">;</span>
+</code></pre></div></div> <h3 id="example">Example</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">animal</span><span class="p">,</span> <span class="n">water_need</span> <span class="k">FROM</span> <span class="n">zoo</span>
+</code></pre></div></div> <table> <thead> <tr> <th>animal</th> <th style="text-align: center">water_need</th> </tr> </thead> <tbody> <tr> <td>elephant</td> <td style="text-align: center">500</td> </tr> <tr> <td>elephant</td> <td style="text-align: center">600</td> </tr> <tr> <td>elephant</td> <td style="text-align: center">550</td> </tr> <tr> <td>tiger</td> <td style="text-align: center">300</td> </tr> <tr> <td>tiger</td> <td style="text-align: center">320</td> </tr> <tr> <td>tiger</td> <td style="text-align: center">330</td> </tr> <tr> <td>tiger</td> <td style="text-align: center">290</td> </tr> <tr> <td>tiger</td> <td style="text-align: center">310</td> </tr> <tr> <td>zebra</td> <td style="text-align: center">200</td> </tr> </tbody> </table> <hr/> <h2 id="where"><strong>WHERE</strong></h2> <h3 id="definition-1">Definition</h3> <p>The <code class="language-plaintext highlighter-rouge">WHERE</code> clause is used to filter records.</p> <h3 id="syntax-1">Syntax</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...</span>
+<span class="k">FROM</span> <span class="k">table_name</span>
+<span class="k">WHERE</span> <span class="n">condition</span><span class="p">;</span>
+</code></pre></div></div> <p>We add comparision operator for set the condition</p> <table> <thead> <tr> <th>Comparision Operator</th> <th>What does it mean?</th> </tr> </thead> <tbody> <tr> <td>=</td> <td>Equal to</td> </tr> <tr> <td>&lt;&gt;</td> <td>Not equal to</td> </tr> <tr> <td>!=</td> <td>Not equal to</td> </tr> <tr> <td>&lt;</td> <td>Less than</td> </tr> <tr> <td>&lt;=</td> <td>Less than or equal to</td> </tr> <tr> <td>&gt;</td> <td>Greater than</td> </tr> <tr> <td>&gt;=</td> <td>Greather thn or equal to</td> </tr> <tr> <td>LIKE ‘%expression%’</td> <td>Contains ‘expression’</td> </tr> <tr> <td>IN(‘exp1’, ‘exp2’, ‘exp3’)</td> <td>Contains any of ‘exp1’, ‘exp2’ and ‘exp3’</td> </tr> </tbody> </table> <h3 id="example-1">Example 1</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">animal</span><span class="p">,</span> <span class="n">water_need</span> <span class="k">FROM</span> <span class="n">zoo</span>
+<span class="k">WHERE</span> <span class="n">animal</span><span class="o">=</span><span class="s1">'zebra'</span>
+</code></pre></div></div> <p>|animal|water_need| |——|———-| |zebra |200 | |zebra |220 | |zebra |240 | |zebra |230 | |zebra |220 | |zebra |100 | |zebra |80 |</p> <h3 id="example-2">Example 2</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">animal</span><span class="p">,</span> <span class="n">water_need</span> <span class="k">FROM</span> <span class="n">zoo</span>
+<span class="k">WHERE</span> <span class="n">water_need</span><span class="o">&gt;</span><span class="mi">500</span>
+</code></pre></div></div> <table> <thead> <tr> <th>animal</th> <th>water_need</th> </tr> </thead> <tbody> <tr> <td>elephant</td> <td>600</td> </tr> <tr> <td>elephant</td> <td>550</td> </tr> <tr> <td>lion</td> <td>600</td> </tr> </tbody> </table> <h3 id="example-3">Example 3</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">animal</span><span class="p">,</span> <span class="n">water_need</span> <span class="k">FROM</span> <span class="n">zoo</span>
+<span class="k">WHERE</span> <span class="n">animal</span> <span class="k">LIKE</span> <span class="s1">'ele%'</span>
+</code></pre></div></div> <table> <thead> <tr> <th>animal</th> <th>water_need</th> </tr> </thead> <tbody> <tr> <td>elephant</td> <td>500</td> </tr> <tr> <td>elephant</td> <td>600</td> </tr> <tr> <td>elephant</td> <td>550</td> </tr> </tbody> </table> <h3 id="example-4">Example 4</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">animal</span><span class="p">,</span> <span class="n">water_need</span> <span class="k">FROM</span> <span class="n">zoo</span>
+<span class="k">WHERE</span> <span class="n">animal</span> <span class="k">IN</span> <span class="p">(</span><span class="s1">'elephant'</span><span class="p">,</span><span class="s1">'lion'</span><span class="p">)</span>
+</code></pre></div></div> <table> <thead> <tr> <th>animal</th> <th>water_need</th> </tr> </thead> <tbody> <tr> <td>elephant</td> <td>500</td> </tr> <tr> <td>elephant</td> <td>600</td> </tr> <tr> <td>elephant</td> <td>550</td> </tr> </tbody> </table> <hr/> <h2 id="limit"><strong>LIMIT</strong></h2> <h3 id="definition-2">Definition</h3> <p>The <code class="language-plaintext highlighter-rouge">LIMIT</code> clause is used to specify the number of records to return.</p> <h3 id="syntax-2">Syntax</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="k">SELECT</span> <span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+  <span class="k">FROM</span> <span class="k">table_name</span>
+  <span class="k">WHERE</span> <span class="n">condition</span>
+  <span class="k">LIMIT</span> <span class="n">number</span><span class="p">;</span>
+</code></pre></div></div> <h3 id="example-1">Example</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">animal</span><span class="p">,</span> <span class="n">water_need</span> <span class="k">FROM</span> <span class="n">zoo</span><span class="p">.</span><span class="n">zoo</span>
+<span class="k">WHERE</span> <span class="n">animal</span><span class="o">=</span><span class="s1">'tiger'</span>
+<span class="k">LIMIT</span> <span class="mi">3</span>
+</code></pre></div></div> <table> <thead> <tr> <th>animal</th> <th>water_need</th> </tr> </thead> <tbody> <tr> <td>tiger</td> <td>300</td> </tr> <tr> <td>tiger</td> <td>320</td> </tr> <tr> <td>tiger</td> <td>330</td> </tr> </tbody> </table> <hr/> <h2 id="and-or-and-not"><strong>AND, OR and NOT</strong></h2> <h3 id="definition-3">Definition</h3> <p>The <code class="language-plaintext highlighter-rouge">WHERE</code> clause can be combined with AND, OR, and NOT operators.</p> <h3 id="syntax-3">Syntax</h3> <ul> <li>AND <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...</span>
+<span class="k">FROM</span> <span class="k">table_name</span>
+<span class="k">WHERE</span> <span class="n">condition1</span> <span class="k">AND</span> <span class="n">condition2</span> <span class="k">AND</span> <span class="n">condition3</span> <span class="p">...;</span>
+</code></pre></div> </div> </li> <li>OR <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...</span>
+<span class="k">FROM</span> <span class="k">table_name</span>
+<span class="k">WHERE</span> <span class="n">condition1</span> <span class="k">OR</span> <span class="n">condition2</span> <span class="k">OR</span> <span class="n">condition3</span> <span class="p">...;</span>
+</code></pre></div> </div> </li> <li>NOT <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">column1</span><span class="p">,</span> <span class="n">column2</span><span class="p">,</span> <span class="p">...</span>
+<span class="k">FROM</span> <span class="k">table_name</span>
+<span class="k">WHERE</span> <span class="k">NOT</span> <span class="n">condition</span><span class="p">;</span>
+</code></pre></div> </div> </li> </ul> <h3 id="example-1-1">Example 1</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">animal</span><span class="p">,</span> <span class="n">water_need</span> <span class="k">FROM</span> <span class="n">zoo</span><span class="p">.</span><span class="n">zoo</span>
+<span class="k">WHERE</span> <span class="n">animal</span><span class="o">=</span><span class="s1">'tiger'</span> <span class="k">AND</span> <span class="n">water_need</span><span class="o">&lt;</span><span class="mi">300</span><span class="p">;</span>
+</code></pre></div></div> <table> <thead> <tr> <th>animal</th> <th>water_need</th> </tr> </thead> <tbody> <tr> <td>tiger</td> <td>290</td> </tr> </tbody> </table> <h3 id="example-2-1">Example 2</h3> <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">animal</span><span class="p">,</span> <span class="n">water_need</span> <span class="k">FROM</span> <span class="n">zoo</span><span class="p">.</span><span class="n">zoo</span>
+<span class="k">WHERE</span> <span class="n">water_need</span><span class="o">&lt;</span><span class="mi">200</span> <span class="k">OR</span> <span class="n">water_need</span><span class="o">&gt;</span><span class="mi">500</span><span class="p">;</span>
+</code></pre></div></div> <table> <thead> <tr> <th>animal</th> <th>water_need</th> </tr> </thead> <tbody> <tr> <td>elephant</td> <td>600</td> </tr> <tr> <td>elephant</td> <td>550</td> </tr> <tr> <td>zebra</td> <td>100</td> </tr> <tr> <td>zebra</td> <td>80</td> </tr> <tr> <td>lion</td> <td>600</td> </tr> </tbody> </table> <hr/> <h2 id="reference">Reference</h2> <p><a href="https://www.w3schools.com/sql">W33 School SQL</a></p> <p><a href="https://www.youtube.com/watch?v=Ad3QTG-Xr4k&amp;t=1165s">SQL Tutorial by Tomi Mester - Data36</a></p>]]></content><author><name></name></author><category term="post"/><category term="SQL"/><category term="note"/><category term="tutorial"/><summary type="html"><![CDATA[SQL Basic Note #1]]></summary></entry><entry><title type="html">Docker Compose Cheatsheet</title><link href="https://ilhamfzri.github.io/blog/2022/git-cheatsheet/" rel="alternate" type="text/html" title="Docker Compose Cheatsheet"/><published>2022-07-13T00:09:00+00:00</published><updated>2022-07-13T00:09:00+00:00</updated><id>https://ilhamfzri.github.io/blog/2022/git-cheatsheet</id><content type="html" xml:base="https://ilhamfzri.github.io/blog/2022/git-cheatsheet/"><![CDATA[<h1 id="docker-compose-cheatsheet">Docker Compose Cheatsheet</h1> <h2 id="basic-example">Basic Example</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># docker-compose.yml</span>
+version: <span class="s1">'2'</span>
+
+services:
+  web:
+    build:
+    <span class="c"># build from Dockerfile</span>
+      context: ./Path
+      dockerfile: Dockerfile
+    ports:
+     - <span class="s2">"5000:5000"</span>
+    volumes:
+     - .:/code
+  redis:
+    image: redis
+</code></pre></div></div> <h2 id="example-1">Example-1</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: <span class="s1">'3'</span>
+services:
+  engine-tts-dev-1:
+    image: engine-tts-dev:1.15.1
+    <span class="c"># restart: always</span>
+    network_mode: host
+    env_file:
+      - .env_dev
+    volumes:
+      - <span class="nb">type</span>: <span class="nb">bind
+        source</span>: ./model
+        target: /app/model
+</code></pre></div></div> <h2 id="example-2">Example-2</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version: <span class="s1">'3.8'</span>
+services:
+  api:
+    build: <span class="nb">.</span>
+    image:engine-stt-id:1.21.12
+    ports:
+      - <span class="s2">"5005:5005"</span>
+    env_file:
+      - .env_dev
+    <span class="nb">command</span>: sh run.sh
+    volumes:
+      - <span class="nb">type</span>: <span class="nb">bind
+        source</span>: ./apps
+        target: /app/apps
+      - <span class="nb">type</span>: <span class="nb">bind
+        source</span>: ./model
+        target: /app/model
+    
+  worker:
+    image: engine-stt-id:1.21.12
+    env_file:
+      - .env_dev
+    <span class="nb">command</span>: sh run_worker.sh
+
+    volumes:
+      - <span class="nb">type</span>: <span class="nb">bind
+        source</span>: ./apps
+        target: /app/apps
+      - <span class="nb">type</span>: <span class="nb">bind
+        source</span>: ./model
+        target: /app/model
+</code></pre></div></div> <h2 id="commands">Commands</h2> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker-compose start
+docker-compose stop
+docker-compose pause
+docker-compose unpause
+docker-compose ps
+docker-compose up
+docker-compose down
+</code></pre></div></div> <h2 id="reference">Reference</h2> <h3 id="building">Building</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>web:
+  <span class="c"># build from Dockerfile</span>
+  build: <span class="nb">.</span>
+  args:     <span class="c"># Add build arguments</span>
+    APP_HOME: app
+  <span class="c"># build from custom Dockerfile</span>
+  build:
+    context: ./dir
+    dockerfile: Dockerfile.dev
+  <span class="c"># build from image</span>
+  image: ubuntu
+  image: ubuntu:14.04
+  image: tutum/influxdb
+  image: example-registry:4000/postgresql
+  image: a4bc65fd
+</code></pre></div></div> <h3 id="ports">Ports</h3> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  ports:
+    - "3000"
+    - "8000:80"  # host:container
+  # expose ports to linked services (not to host)
+  expose: ["3000"]
+</code></pre></div></div> <h3 id="commands-1">Commands</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c"># command to execute</span>
+  <span class="nb">command</span>: bundle <span class="nb">exec </span>thin <span class="nt">-p</span> 3000
+  <span class="nb">command</span>: <span class="o">[</span>bundle, <span class="nb">exec</span>, thin, <span class="nt">-p</span>, 3000]
+  <span class="c"># override the entrypoint</span>
+  entrypoint: /app/start.sh
+  entrypoint: <span class="o">[</span>php, <span class="nt">-d</span>, vendor/bin/phpunit]
+</code></pre></div></div> <h3 id="environment-variables">Environment variables</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c"># environment vars</span>
+  environment:
+    RACK_ENV: development
+  environment:
+    - <span class="nv">RACK_ENV</span><span class="o">=</span>development
+  <span class="c"># environment vars from file</span>
+  env_file: .env
+  env_file: <span class="o">[</span>.env, .development.env]
+</code></pre></div></div> <h3 id="dependencies">Dependencies</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c"># makes the `db` service available as the hostname `database`</span>
+  <span class="c"># (implies depends_on)</span>
+  links:
+    - db:database
+    - redis
+  <span class="c"># make sure `db` is alive before starting</span>
+  depends_on:
+    - db
+</code></pre></div></div> <h3 id="other-options">Other options</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="c"># make this service extend another</span>
+  extends:
+    file: common.yml  <span class="c"># optional</span>
+    service: webapp
+  volumes:
+    - /var/lib/mysql
+    - ./_data:/var/lib/mysql
+</code></pre></div></div> <h2 id="advanced-features">Advanced features</h2> <h3 id="labels">Labels</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>services:
+  web:
+    labels:
+      com.example.description: <span class="s2">"Accounting web app"</span>
+</code></pre></div></div> <h3 id="dns-server">DNS Server</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>services:
+  web:
+    dns: 8.8.8.8
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
+</code></pre></div></div> <h3 id="devices">Devices</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>services:
+  web:
+    devices:
+    - <span class="s2">"/dev/ttyUSB0:/dev/ttyUSB0"</span>
+</code></pre></div></div> <h3 id="external-links">External links</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>services:
+  web:
+    external_links:
+      - redis_1
+      - project_db_1:mysql
+</code></pre></div></div> <h3 id="network">Network</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># creates a custom network called `frontend`</span>
+networks:
+  frontend:
+</code></pre></div></div> <h3 id="hosts">Hosts</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code>services:
+  web:
+    extra_hosts:
+      - <span class="s2">"somehost:192.168.1.100"</span>
+</code></pre></div></div> <h3 id="volume">Volume</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># mount host paths or named volumes, specified as sub-options to a service</span>
+  db:
+    image: postgres:latest
+    volumes:
+      - <span class="s2">"/var/run/postgres/postgres.sock:/var/run/postgres/postgres.sock"</span>
+      - <span class="s2">"dbdata:/var/lib/postgresql/data"</span>
+
+volumes:
+  dbdata:
+</code></pre></div></div> <h3 id="user">User</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># specifying user</span>
+user: root
+<span class="c"># specifying both user and group with ids</span>
+user: 0:0
+</code></pre></div></div> <h3 id="external-network">External Network</h3> <div class="language-sh highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># join a pre-existing network</span>
+networks:
+  default:
+    external:
+      name: frontend
+</code></pre></div></div>]]></content><author><name></name></author><category term="cheatsheet"/><category term="docker"/><category term="cheatsheet"/><summary type="html"><![CDATA[Docker Compose Cheatsheet]]></summary></entry></feed>
