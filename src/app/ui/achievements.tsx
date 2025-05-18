@@ -53,7 +53,7 @@ export function Achivements() {
 
         return <div
             onClick={() => { setOpen(!open) }}
-            className="py-5 px-5 rounded-xl border border-solid border-black/[.08] dark:border-white/[.145] transition-colors hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent cursor-pointer">
+            className="py-5 px-5 rounded-xl border border-solid border-black/[.081] dark:border-white/[.145] transition-colors hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent cursor-pointer">
             <div className="flex w-full items-center justify-between">
                 <div className="flex flex-col">
                     <div className={`text-sm sm:text-sm md:text-lg text-white font-bold`}>
