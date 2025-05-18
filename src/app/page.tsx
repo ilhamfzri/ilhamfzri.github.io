@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Header } from "@/app//ui/header";
 import { Summary } from "./ui/summary";
 import { Experience } from "./ui/experience";

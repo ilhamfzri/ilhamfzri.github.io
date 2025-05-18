@@ -1,21 +1,19 @@
-import { poppins } from "../layout";
-
 import { EnvelopeIcon } from '@heroicons/react/24/solid'
 
 export function Footer() {
     return <div id="contact-me" className="flex flex-col w-full max-w-4xl px-3 space-y-10 mx-auto mt-10">
         <div className="space-y-2">
-            <p className={`${poppins.className} whitespace-pre-line text-4xl text-white font-semibold`}>
+            <p className={`whitespace-pre-line text-4xl text-white font-semibold`}>
                 {"Have a project, idea, or opportunity?"}
             </p>
-            <p className={`${poppins.className} whitespace-pre-line text-xl text-white font-semibold`}>
+            <p className={`whitespace-pre-line text-xl text-white font-semibold`}>
                 {"Feel free to reach out via email or my social media account.👋😃"}
             </p>
             <div className="flex mt-5">
                 <EnvelopeIcon className="h-5 w-5 stroke-[2.5]" />
                 <a
                     href="mailto:ilhamfazri3rd@gmail.com"
-                    className={`${poppins.className} font-semibold text-sm ml-2 underline cursor-pointer active:text-blue-500`}>
+                    className={`font-semibold text-sm ml-2 underline cursor-pointer active:text-blue-500`}>
                     {"ilhamfazri3rd@gmail.com"}
                 </a>
             </div>
@@ -84,7 +82,7 @@ export function Footer() {
                     </svg>
                 </a>
             </div>
-            <div className={`${poppins.className} text-sm text-center mt-10 mb-2`}>© 2025 Ilham Fazri.</div>
+            <div className={`text-sm text-center mt-10 mb-2`}>© 2025 Ilham Fazri.</div>
         </div>
     </div>
 }

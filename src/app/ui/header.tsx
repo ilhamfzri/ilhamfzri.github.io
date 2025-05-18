@@ -3,7 +3,6 @@
 import { useState } from 'react'
 import { Dialog, DialogPanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import { poppins } from '../layout'
 
 const navigation = [
     { name: 'Home', href: '#' },
@@ -83,7 +82,7 @@ export function Header() {
                                         }}
                                         key={item.name}
                                         href={item.href}
-                                        className={`${poppins.className} block text-1xl text-white font-semibold hover:text-blue-500 active:text-blue-500 my-5`}
+                                        className={`block text-1xl text-white font-semibold hover:text-blue-500 active:text-blue-500 my-5`}
                                     >
                                         {item.name}
                                     </a>

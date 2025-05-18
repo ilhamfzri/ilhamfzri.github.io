@@ -1,7 +1,5 @@
 'use client'
 
-import { poppins } from "@/app/layout";
-import LogoIcon from '@/assets/logo-bca.svg';
 import { WorkExperience } from "@/app/lib/definitions";
 import Image from "next/image";
 import { useState } from "react";
@@ -59,7 +57,7 @@ export function Experience() {
     const [open, setOpen] = useState(false);
 
     return <div id="work-experience" className="w-full space-y-8 scroll-mt-25">
-        <div className={`${poppins.className} text-2xl md:text-4xl font-extrabold bg-gradient-to-b from-blue-300 to-blue-500 bg-clip-text text-transparent text-center`}>
+        <div className={`text-2xl md:text-4xl font-extrabold bg-gradient-to-b from-blue-300 to-blue-500 bg-clip-text text-transparent text-center`}>
             WORK EXPERIENCE
         </div>
         <WorkExperienceItem workExperience={experience0} iconSrc="/logo-bca.svg" />
@@ -80,7 +78,7 @@ export function Experience() {
         return <div className="flex items-center justify-center w-full">
             <button
                 onClick={onClick}
-                className={`${poppins.className} flex items-center gap-2 px-5 py-2 bg-white text-black rounded hover:text-blue-500 rounded-full active:text-blue-500 cursor-pointer text-sm font-semibold`}>
+                className={`flex items-center gap-2 px-5 py-2 bg-white text-black rounded hover:text-blue-500 rounded-full active:text-blue-500 cursor-pointer text-sm font-semibold`}>
                 {!open ? 'Show More' : 'Show Less'}
                 {!open ? <ChevronDownIcon className="h-5 w-5 stroke-[2.5]" /> : <ChevronUpIcon className="h-5 w-5 stroke-[2.5]" />}
             </button >
@@ -111,21 +109,21 @@ export function Experience() {
                             />
                         </div>
                         <div className="flex flex-col ml-3">
-                            <div className={`${poppins.className} text-2xl text-white font-bold`}>
+                            <div className={`text-2xl text-white font-bold`}>
                                 {workExperience.position}
                             </div>
-                            <div className={`${poppins.className} text-base text-blue-500 font-semibold`}>
+                            <div className={`text-base text-blue-500 font-semibold`}>
                                 {workExperience.company}
                             </div>
                         </div>
                     </div>
 
-                    <a className={`${poppins.className} text-sm text-gray-200`}>
+                    <a className={`text-sm text-gray-200`}>
                         {`${workExperience.startDate} - ${workExperience.endDate}`}
                     </a>
                 </div>
 
-                <ul className={`${poppins.className} list-outside list-disc text-base text-gray-400 ml-4 pl-1`}>
+                <ul className={`list-outside list-disc text-base text-gray-400 ml-4 pl-1`}>
                     {workExperience.responsibilities.map(responsibility => <li key={responsibility}>
                         {responsibility}
                     </li>)}
@@ -147,13 +145,13 @@ export function Experience() {
                             />
                         </div>
                         <div className="flex flex-col ml-3">
-                            <div className={`${poppins.className} text-base text-white font-bold`}>
+                            <div className={`text-base text-white font-bold`}>
                                 {workExperience.position}
                             </div>
-                            <div className={`${poppins.className} text-sm text-blue-500 font-semibold`}>
+                            <div className={`text-sm text-blue-500 font-semibold`}>
                                 {workExperience.company}
                             </div>
-                            <div className={`${poppins.className} text-xs text-gray-200`}>
+                            <div className={`text-xs text-gray-200`}>
                                 {`${workExperience.startDate} - ${workExperience.endDate}`}
                             </div>
                         </div>
@@ -161,7 +159,7 @@ export function Experience() {
 
                 </div>
 
-                <ul className={`${poppins.className} list-outside list-disc text-sm text-gray-400 ml-4 pl-1`}>
+                <ul className={`list-outside list-disc text-sm text-gray-400 ml-4 pl-1`}>
                     {workExperience.responsibilities.map(responsibility => <li key={responsibility}>
                         {responsibility}
                     </li>)}

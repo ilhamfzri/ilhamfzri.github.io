@@ -1,9 +1,5 @@
-import { poppins } from "@/app/layout";
 import { CodeBracketSquareIcon, CircleStackIcon, WrenchScrewdriverIcon, SquaresPlusIcon } from '@heroicons/react/24/solid'
 import { SkillSet } from "@/app/lib/definitions";
-import Image from "next/image";
-
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const features: SkillSet[] = [
     {
@@ -34,7 +30,7 @@ const features: SkillSet[] = [
 
 export function Skills() {
     return <div className="w-full">
-        <div className={`${poppins.className} text-xl md:text-2xl font-semibold text-center text-gray-200`}>
+        <div className={`text-xl md:text-2xl font-semibold text-center text-gray-200`}>
             EXPERIENCE WITH
         </div>
         <div className="mx-auto mt-5 max-w-2xl sm:mt-5 lg:mt-5 lg:max-w-4xl">
@@ -52,8 +48,8 @@ function SkillItem({ skillSet }: { skillSet: SkillSet }) {
         <div className="flex">
             <skillSet.icon key={skillSet.name} className="w-6 h-6 mt-1 text-blue-500 hover:text-blue-200 shrink-0" />
             <div>
-                <div className={`${poppins.className} ml-5 text-lg text-white font-semibold`}> {skillSet.name}</div>
-                <div className={`${poppins.className} ml-5 text-sm text-gray-400 mt-2`}> {skillSet.description}</div>
+                <div className={`ml-5 text-lg text-white font-semibold`}> {skillSet.name}</div>
+                <div className={`ml-5 text-sm text-gray-400 mt-2`}> {skillSet.description}</div>
             </div>
         </div>
     </div >

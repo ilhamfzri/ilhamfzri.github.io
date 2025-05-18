@@ -1,6 +1,5 @@
 'use client'
 
-import { poppins } from "@/app/layout";
 import { EducationExperience } from "@/app/lib/definitions";
 import Image from "next/image";
 
@@ -15,7 +14,7 @@ const education0: EducationExperience = {
 
 export function Education() {
     return <div id="education" className="w-full space-y-8 scroll-mt-25">
-        <div className={`${poppins.className} text-2xl md:text-4xl font-extrabold bg-gradient-to-b from-blue-300 to-blue-500 bg-clip-text text-transparent text-center`}>
+        <div className={`text-2xl md:text-4xl font-extrabold bg-gradient-to-b from-blue-300 to-blue-500 bg-clip-text text-transparent text-center`}>
             EDUCATION
         </div>
         <EducationItem education={education0} />
@@ -45,14 +44,14 @@ function EducationItem({ education }: { education: EducationExperience }) {
                         />
                     </div>
                     <div className="flex flex-col ml-3">
-                        <div className={`${poppins.className} text-base text-white font-bold`}>
+                        <div className={`text-base text-white font-bold`}>
                             {education.title}
                         </div>
-                        <div className={`${poppins.className} text-xs font-bold bg-white max-w-fit text-black p-0.5 radius-full rounded-full`}>GPA : 3.84/4.00</div>
-                        <div className={`${poppins.className} text-sm text-blue-500 font-semibold`}>
+                        <div className={`text-xs font-bold bg-white max-w-fit text-black p-0.5 radius-full rounded-full`}>GPA : 3.84/4.00</div>
+                        <div className={`text-sm text-blue-500 font-semibold`}>
                             {education.place}
                         </div>
-                        <a className={`${poppins.className} text-xs text-gray-200`}>
+                        <a className={`$text-xs text-gray-200`}>
                             {`${education.startDate} - ${education.endDate}`}
                         </a>
                     </div>
@@ -60,7 +59,7 @@ function EducationItem({ education }: { education: EducationExperience }) {
 
             </div>
 
-            <ul className={`${poppins.className} list-outside list-disc text-sm text-gray-400 ml-4`}>
+            <ul className={`list-outside list-disc text-sm text-gray-400 ml-4`}>
                 {education.activities.map(activity => <li key={activity}>
                     {activity}
                 </li>)}
@@ -82,22 +81,22 @@ function EducationItem({ education }: { education: EducationExperience }) {
                         />
                     </div>
                     <div className="flex flex-col ml-3">
-                        <div className={`${poppins.className} text-2xl text-white font-bold`}>
+                        <div className={`text-2xl text-white font-bold`}>
                             {education.title}
                         </div>
-                        <div className={`${poppins.className} text-base text-blue-500 font-semibold`}>
+                        <div className={`text-base text-blue-500 font-semibold`}>
                             {education.place}
                         </div>
-                        <div className={`${poppins.className} text-xs font-bold bg-white max-w-fit text-black p-0.5 radius-full rounded-full`}>GPA : 3.84/4.00</div>
+                        <div className={`text-xs font-bold bg-white max-w-fit text-black p-0.5 radius-full rounded-full`}>GPA : 3.84/4.00</div>
                     </div>
                 </div>
 
-                <a className={`${poppins.className} text-sm text-gray-200`}>
+                <a className={`text-sm text-gray-200`}>
                     {`${education.startDate} - ${education.endDate}`}
                 </a>
             </div>
 
-            <ul className={`${poppins.className} list-outside list-disc text-base text-gray-400 ml-4`}>
+            <ul className={`list-outside list-disc text-base text-gray-400 ml-4`}>
                 {education.activities.map(activity => <li key={activity}>
                     {activity}
                 </li>)}
