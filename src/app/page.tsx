@@ -9,25 +9,26 @@ import { Achivements } from "./ui/achievements";
 import { Footer } from "./ui/footer";
 import Head from "next/head";
 
-
 export const metadata = {
-  title: 'Ilham Fazri - Fullstack Engineer',
-  description: 'I’m a full-stack engineer with 4+ years of turning ideas into real, reliable apps — from pixel-perfect frontends to solid backend systems. I love clean code, learning new tech, and building things that actually make life easier.',
+  title: "Ilham Fazri - Fullstack Engineer",
+  description:
+    "I’m a full-stack engineer with 4+ years of turning ideas into real, reliable apps — from pixel-perfect frontends to solid backend systems. I love clean code, learning new tech, and building things that actually make life easier.",
   openGraph: {
-    title: 'Ilham Fazri - Fullstack Engineer',
-    description: 'I’m a full-stack engineer with 4+ years of turning ideas into real, reliable apps — from pixel-perfect frontends to solid backend systems. I love clean code, learning new tech, and building things that actually make life easier.',
-    url: 'https://example.com/about',
-    siteName: 'Ilham Fazri - Fullstack Engineer',
+    title: "Ilham Fazri - Fullstack Engineer",
+    description:
+      "I’m a full-stack engineer with 4+ years of turning ideas into real, reliable apps — from pixel-perfect frontends to solid backend systems. I love clean code, learning new tech, and building things that actually make life easier.",
+    url: "https://example.com/about",
+    siteName: "Ilham Fazri - Fullstack Engineer",
     images: [
       {
-        url: '/logo.png',
+        url: "/logo.png",
         width: 1200,
         height: 630,
       },
     ],
-    type: 'website',
+    type: "website",
   },
-}
+};
 
 export default function Home() {
   return (
