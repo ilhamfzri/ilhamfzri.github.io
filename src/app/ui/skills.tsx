@@ -22,7 +22,7 @@ const features: SkillSet[] = [
   {
     name: "Technologies",
     description:
-      "Virtualization (Docker), Cloud Platforms (AWS, OpenShift Container Platform - OCP), Message Broker (RabbitMQ, Kafka), and CI/CD (GitHub/GitLab, Jenkins)",
+      "Virtualization (Docker), Cloud Platforms (AWS, OpenShift Container Platform - OCP), Message Broker (RabbitMQ, Kafka), Monitoring (Kibana, Grafana, Dynatrace & Instana) and CI/CD (GitHub/GitLab, Jenkins)",
     icon: WrenchScrewdriverIcon,
   },
   {
