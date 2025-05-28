@@ -1,20 +1,13 @@
 "use client";
 
-import { EducationExperience } from "@/app/lib/definitions";
+import { EducationItem } from "@/models/EducationItem";
 import Image from "next/image";
 
-const education0: EducationExperience = {
-  title: "B.s. in Electronic and Instrumentation",
-  place: "Department Computer Science and Electronics, Gadjah Mada University",
-  startDate: "Aug 2018",
-  endDate: "Aug 2022",
-  activities: [
-    "Participated in international and national competitions in the fields of electronics and software engineering.",
-    "Thesis: Detection and Recognition of Multiple Traffic Violation Types Using Video Processing Based on YOLO — Published in ICIC Express Letters.",
-  ],
-};
-
-export function Education() {
+export function EducationHomeSection({
+  educationItems,
+}: {
+  educationItems: EducationItem[];
+}) {
   return (
     <div id="education" className="w-full space-y-8 scroll-mt-25">
       <div
@@ -22,12 +15,16 @@ export function Education() {
       >
         EDUCATION
       </div>
-      <EducationItem education={education0} />
+      <div className="space-y-3">
+        {educationItems.map((educationItem) => (
+          <EducationComponent education={educationItem} />
+        ))}
+      </div>
     </div>
   );
 }
 
-function EducationItem({ education }: { education: EducationExperience }) {
+function EducationComponent({ education }: { education: EducationItem }) {
   return (
     <>
       <div className="block sm:hidden">

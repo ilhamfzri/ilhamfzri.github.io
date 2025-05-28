@@ -2,14 +2,13 @@
 
 import Image from "next/image";
 
-export function Summary() {
+export function SummaryHomeSection() {
   const handleDownload = () => {
     // const link = document.createElement("a");
     // link.href = "/memoji.png";
     // link.download = "memoji.png";
     // link.click();
   };
-
   return (
     <div className="flex flex-col items-center w-full space-y-3">
       <div className="w-40 h-40 rounded-full overflow-hidden">

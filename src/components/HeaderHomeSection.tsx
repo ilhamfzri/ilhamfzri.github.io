@@ -3,16 +3,13 @@
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { NavigationItem } from "@/models/NavigationItem";
 
-const navigation = [
-  { name: "Home", href: "#" },
-  { name: "Work Experience", href: "#work-experience" },
-  { name: "Education", href: "#education" },
-  { name: "Achivements", href: "#achivements" },
-  { name: "Contact", href: "#contact-me" },
-];
-
-export function Header() {
+export function HeaderHomeSection({
+  navigationItems,
+}: {
+  navigationItems: NavigationItem[];
+}) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -45,7 +42,7 @@ export function Header() {
           </button>
         </div>
         <div className="hidden lg:flex lg:gap-x-12">
-          {navigation.map((item) => (
+          {navigationItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
@@ -92,7 +89,7 @@ export function Header() {
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-12">
-                {navigation.map((item) => (
+                {navigationItems.map((item) => (
                   <div key={item.name}>
                     <a
                       onClick={() => {

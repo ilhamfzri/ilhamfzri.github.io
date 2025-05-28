@@ -5,35 +5,9 @@ import {
   SquaresPlusIcon,
 } from "@heroicons/react/24/solid";
 import { SkillSet } from "@/app/lib/definitions";
+import { SkillItem } from "@/models/SkillItem";
 
-const features: SkillSet[] = [
-  {
-    name: "Languages",
-    description:
-      "Javascript (React, Next Js), Java (Spring Boot), Dart (Flutter Mobile App), Python (Fast API, Pytorch), Golang (Gin, GORM, gRPC)",
-    icon: CodeBracketSquareIcon,
-  },
-  {
-    name: "Databases",
-    description:
-      "NoSQL (MongoDB, Firebase, Redis) and SQL (PostgreeSQL, Oracle)",
-    icon: CircleStackIcon,
-  },
-  {
-    name: "Technologies",
-    description:
-      "Virtualization (Docker), Cloud Platforms (AWS, OpenShift Container Platform - OCP), Message Broker (RabbitMQ, Kafka), Monitoring (Kibana, Grafana, Dynatrace & Instana) and CI/CD (GitHub/GitLab, Jenkins)",
-    icon: WrenchScrewdriverIcon,
-  },
-  {
-    name: "Software Architecture",
-    description:
-      "Clean Architecture, Event‐Driven Architecture, Microservices Architecture, and Design Pattern(Creational, Structural, etc)",
-    icon: SquaresPlusIcon,
-  },
-];
-
-export function Skills() {
+export function SkillsHomeSection({ skillItems }: { skillItems: SkillItem[] }) {
   return (
     <div className="w-full">
       <div
@@ -43,8 +17,8 @@ export function Skills() {
       </div>
       <div className="mx-auto mt-5 max-w-2xl sm:mt-5 lg:mt-5 lg:max-w-4xl">
         <dl className="grid max-w-xl grid-cols-1 gap-x-5 gap-y-5 lg:max-w-none lg:grid-cols-2 lg:gap-y-5">
-          {features.map((feature) => (
-            <SkillItem key={feature.name} skillSet={feature} />
+          {skillItems.map((skillItem) => (
+            <SkillItemSection key={skillItem.name} skillSet={skillItem} />
           ))}
         </dl>
       </div>
@@ -52,7 +26,7 @@ export function Skills() {
   );
 }
 
-function SkillItem({ skillSet }: { skillSet: SkillSet }) {
+function SkillItemSection({ skillSet }: { skillSet: SkillSet }) {
   return (
     <div
       key={skillSet.name}
