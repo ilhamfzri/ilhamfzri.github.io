@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { useState } from "react";
-import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/24/outline";
-import { WorkExperienceItem } from "@/models/WorkExpericenceitem";
+import Image from 'next/image';
+import { useState } from 'react';
+import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
+import { WorkExperienceItem } from '@/models/WorkExpericenceitem';
 
 export function ExperienceHomeSection({
   workExperienceItems,
@@ -27,7 +27,7 @@ export function ExperienceHomeSection({
       {!open && <ShowMoreLessButton />}
       <div
         className={`overflow-hidden transition-max-height duration-300 ease-in-out space-y-8 ${
-          open ? "max-h-300" : "max-h-0"
+          open ? 'max-h-300' : 'max-h-0'
         }`}
       >
         {workExperienceItems.slice(2).map((workExperienceItem) => (
@@ -48,7 +48,7 @@ export function ExperienceHomeSection({
           onClick={onClick}
           className={`flex items-center gap-2 px-5 py-2 bg-white text-black rounded hover:text-blue-500 rounded-full active:text-blue-500 cursor-pointer text-sm font-semibold`}
         >
-          {!open ? "Show More" : "Show Less"}
+          {!open ? 'Show More' : 'Show Less'}
           {!open ? (
             <ChevronDownIcon className="h-5 w-5 stroke-[2.5]" />
           ) : (
@@ -90,9 +90,7 @@ export function ExperienceHomeSection({
                 />
               </div>
               <div className="flex flex-col ml-3">
-                <div className={`text-2xl text-white font-bold`}>
-                  {workExperienceItem.position}
-                </div>
+                <div className={`text-2xl text-white font-bold`}>{workExperienceItem.position}</div>
                 <div className={`text-base text-blue-500 font-semibold`}>
                   {workExperienceItem.company}
                 </div>
@@ -104,9 +102,7 @@ export function ExperienceHomeSection({
             </a>
           </div>
 
-          <ul
-            className={`list-outside list-disc text-base text-gray-400 ml-4 pl-1`}
-          >
+          <ul className={`list-outside list-disc text-base text-gray-400 ml-4 pl-1`}>
             {workExperienceItem.responsibilities.map((responsibility) => (
               <li key={responsibility}>{responsibility}</li>
             ))}
@@ -143,9 +139,7 @@ export function ExperienceHomeSection({
             </div>
           </div>
 
-          <ul
-            className={`list-outside list-disc text-sm text-gray-400 ml-4 pl-1`}
-          >
+          <ul className={`list-outside list-disc text-sm text-gray-400 ml-4 pl-1`}>
             {workExperienceItem.responsibilities.map((responsibility) => (
               <li key={responsibility}>{responsibility}</li>
             ))}

@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import Image from "next/image";
+import Image from 'next/image';
 
 export function SummaryHomeSection() {
   const handleDownload = () => {
@@ -22,9 +22,7 @@ export function SummaryHomeSection() {
       </div>
 
       <div className="flex flex-col">
-        <div
-          className={`text-2xl md:text-4xl font-extrabold text-white text-center`}
-        >
+        <div className={`text-2xl md:text-4xl font-extrabold text-white text-center`}>
           Ilham Fazri
         </div>
         <div
@@ -34,20 +32,17 @@ export function SummaryHomeSection() {
         </div>
       </div>
 
-      <div
-        className={`text-sm md:text-xl px-2 py-3 rounded-full text-center text-gray-200`}
-      >
-        I’m a full-stack engineer with 4+ years of turning ideas into real,
-        reliable apps — from pixel-perfect frontends to solid backend systems. I
-        love clean code, learning new tech, and building things that actually
-        make life easier.
+      <div className={`text-sm md:text-xl px-2 py-3 rounded-full text-center text-gray-200`}>
+        I’m a full-stack engineer with 4+ years of turning ideas into real, reliable apps — from
+        pixel-perfect frontends to solid backend systems. I love clean code, learning new tech, and
+        building things that actually make life easier.
       </div>
 
       <div className="flex items-center justify-center w-full space-x-4">
         <button
           onClick={() => {
-            const section = document.getElementById("contact-me");
-            section?.scrollIntoView({ behavior: "smooth" });
+            const section = document.getElementById('contact-me');
+            section?.scrollIntoView({ behavior: 'smooth' });
           }}
           className={` bg-white text-black px-5 py-3 rounded-full font-semibold hover:text-blue-500 active:text-blue-500 cursor-pointer`}
         >

@@ -1,18 +1,9 @@
-import {
-  CodeBracketSquareIcon,
-  CircleStackIcon,
-  WrenchScrewdriverIcon,
-  SquaresPlusIcon,
-} from "@heroicons/react/24/solid";
-import { SkillSet } from "@/app/lib/definitions";
-import { SkillItem } from "@/models/SkillItem";
+import { SkillItem } from '@/models/SkillItem';
 
 export function SkillsHomeSection({ skillItems }: { skillItems: SkillItem[] }) {
   return (
     <div className="w-full">
-      <div
-        className={`text-xl md:text-2xl font-semibold text-center text-gray-200`}
-      >
+      <div className={`text-xl md:text-2xl font-semibold text-center text-gray-200`}>
         EXPERIENCE WITH
       </div>
       <div className="mx-auto mt-5 max-w-2xl sm:mt-5 lg:mt-5 lg:max-w-4xl">
@@ -26,7 +17,7 @@ export function SkillsHomeSection({ skillItems }: { skillItems: SkillItem[] }) {
   );
 }
 
-function SkillItemSection({ skillSet }: { skillSet: SkillSet }) {
+function SkillItemSection({ skillSet }: { skillSet: SkillItem }) {
   return (
     <div
       key={skillSet.name}
@@ -38,14 +29,8 @@ function SkillItemSection({ skillSet }: { skillSet: SkillSet }) {
           className="w-6 h-6 mt-1 text-blue-500 hover:text-blue-200 shrink-0"
         />
         <div>
-          <div className={`ml-5 text-lg text-white font-semibold`}>
-            {" "}
-            {skillSet.name}
-          </div>
-          <div className={`ml-5 text-sm text-gray-400 mt-2`}>
-            {" "}
-            {skillSet.description}
-          </div>
+          <div className={`ml-5 text-lg text-white font-semibold`}> {skillSet.name}</div>
+          <div className={`ml-5 text-sm text-gray-400 mt-2`}> {skillSet.description}</div>
         </div>
       </div>
     </div>

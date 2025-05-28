@@ -1,11 +1,8 @@
-"use client";
+'use client';
 
-import {
-  ArrowDownCircleIcon,
-  ArrowUpCircleIcon,
-} from "@heroicons/react/24/solid";
-import { useState } from "react";
-import { AchievementItem } from "@/models/AchivementItem";
+import { ArrowDownCircleIcon, ArrowUpCircleIcon } from '@heroicons/react/24/solid';
+import { useState } from 'react';
+import { AchievementItem } from '@/models/AchivementItem';
 
 export function AchivementsHomeSection({
   achievementItems,
@@ -21,10 +18,7 @@ export function AchivementsHomeSection({
       </div>
       <div className="space-y-3">
         {achievementItems.map((achievementItem) => (
-          <AchivementItem
-            key={achievementItem.title}
-            achievement={achievementItem}
-          />
+          <AchivementItem key={achievementItem.title} achievement={achievementItem} />
         ))}
       </div>
     </div>
@@ -42,14 +36,10 @@ export function AchivementsHomeSection({
       >
         <div className="flex w-full items-center justify-between">
           <div className="flex flex-col">
-            <div
-              className={`text-sm sm:text-sm md:text-lg text-white font-bold`}
-            >
+            <div className={`text-sm sm:text-sm md:text-lg text-white font-bold`}>
               {achievement.title}
             </div>
-            <div
-              className={`text-xs sm:text-sm md:text-md text-blue-500 font-semibold`}
-            >
+            <div className={`text-xs sm:text-sm md:text-md text-blue-500 font-semibold`}>
               {achievement.heldBy}
             </div>
           </div>
@@ -61,12 +51,10 @@ export function AchivementsHomeSection({
         </div>
         <div
           className={`overflow-hidden transition-all duration-300 ease-in-out ${
-            open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+            open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <div
-            className={`text-xs sm:text-sm md:text-base text-gray-400 mt-5 font-normal`}
-          >
+          <div className={`text-xs sm:text-sm md:text-base text-gray-400 mt-5 font-normal`}>
             {achievement.description}
           </div>
         </div>
