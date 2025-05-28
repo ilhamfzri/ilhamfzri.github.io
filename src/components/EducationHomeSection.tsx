@@ -13,7 +13,7 @@ export function EducationHomeSection({ educationItems }: { educationItems: Educa
       </div>
       <div className="space-y-3">
         {educationItems.map((educationItem) => (
-          <EducationComponent education={educationItem} />
+          <EducationComponent key={educationItem.title} education={educationItem} />
         ))}
       </div>
     </div>

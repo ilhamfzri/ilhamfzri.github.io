@@ -21,7 +21,10 @@ export function ExperienceHomeSection({
       </div>
       <div>
         {workExperienceItems.slice(0, 2).map((workExperienceItem) => (
-          <WorkExperienceComponents workExperienceItem={workExperienceItem} />
+          <WorkExperienceComponents
+            key={workExperienceItem.position + workExperienceItem.company}
+            workExperienceItem={workExperienceItem}
+          />
         ))}
       </div>
       {!open && <ShowMoreLessButton />}
@@ -31,7 +34,10 @@ export function ExperienceHomeSection({
         }`}
       >
         {workExperienceItems.slice(2).map((workExperienceItem) => (
-          <WorkExperienceComponents workExperienceItem={workExperienceItem} />
+          <WorkExperienceComponents
+            key={workExperienceItem.position + workExperienceItem.company}
+            workExperienceItem={workExperienceItem}
+          />
         ))}
       </div>
       {open && <ShowMoreLessButton />}
